@@ -5,7 +5,8 @@
 
     <div class= "row">
       <% @cocktails.each do |cocktail| %>
-        <div class= "col-lg-4 cocktails-cards" style="background-image: url('mojito.jpg');">
+        <div class= "col-lg-4 cocktails-cards">
+           <img src="mojito.jpg"/'#{<%= cocktail.name %>}'/>
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
           <%= link_to cocktail_path(cocktail), method: :delete do %>
             <i class="fa fa-trash"></i>

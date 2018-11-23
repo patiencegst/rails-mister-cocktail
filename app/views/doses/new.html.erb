@@ -1,9 +1,18 @@
+
+
+<div class= "row">
 <h1> New Ingredient </h1>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-     <%= f.association :ingredient %>
-    <%= f.submit "confirm new elements", class: "btn btn-primary" %>
-  <% end %>
+</div>
+  <div class= "row">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <div class= "col-lg-4 ingredient-cards" style="background-image: url('mojito.jpg');">
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit "Go", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
+
 
 
 
